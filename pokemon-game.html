@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="pokemon-game-style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pokemon Battle</h1>
+
+    <section class="game-screen">
+        <section class="enemy-stats">
+            <div class="bar-box">
+                <h2>Squirtle Lv5</h2>
+                <div class="life-bar" id="enemy-life"></div>
+            </div>
+        </section>
+
+        <section class="enemy-pokemon">
+            <div>
+                <img id="squirtle" src="squirtle_front.gif" alt="Pokemon squirtle">
+            </div>
+        </section>
+
+        <section class="user-stats">
+            <div class="bar-box">
+                <h2>Charmander Lv5</h2>
+                <div class="life-bar" id="user-life"></div>
+            </div>
+        </section>
+
+        <section class="user-pokemon">
+            <div>
+                <img id="charmander" src="charmander_back.gif" alt="Pokemon squirtle">
+            </div>
+            <div class="moves">
+                <h3 id="scratch">Scratch</h3>
+                <h3 id="growl">Growl</h3>
+            </div>
+        </section>
+    </section>
+
+    <section class="game-message">
+        <h2 id="text-message"></h2>
+        <h2 id="text-message2"></h2>
+        <h2 id="final-message"></h2>
+        <button id="play-again">Play Again</button>
+    </section>
+    
+
+    <script src="pokemon-game-script.js"></script>
+</body>
+</html>

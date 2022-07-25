@@ -1,0 +1,127 @@
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+body {
+    margin: 1rem;
+    font-family: helvetica, sans-serif;
+    line-height: 1.5;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.game-screen {
+    margin: 0 auto;
+    height: 440px;
+    width: 360px;
+    /* border: 2px solid purple; */
+    background: rgb(223, 255, 223);
+}
+
+.enemy-stats {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    /* border: 2px solid red; */
+    align-items: center;
+    padding: 0 20px;
+    justify-content: flex-start;
+}
+
+.bar-box {
+    height: 70px;
+    width: 280px;
+    border: 2px solid grey;
+    background: rgba(255, 255, 223, 0.836);
+    
+}
+
+.life-bar {
+    width: 100%;
+    height: 10px;
+    background: lightseagreen;
+    border-radius: 500px;
+    border: 2px solid grey;
+}
+
+.enemy-pokemon {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.enemy-pokemon div {
+    height: 100px;
+    width: 100px;
+    margin: 20px 20px;
+}
+
+.enemy-pokemon div img {
+    width: 100%;
+    height: auto;
+}
+
+
+.user-stats {
+    display: flex;
+    width: 100%;
+    height: 80px;
+    /* border: 2px solid red; */
+    align-items: center;
+    padding: 0 20px;
+    justify-content: flex-end;
+}
+
+.user-pokemon {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.user-pokemon div {
+    height: 100px;
+    width: 100px;
+    margin: 20px 20px;
+}
+
+.user-pokemon div img {
+    width: 100%;
+    height: auto;
+}
+
+.moves {
+    /* border: 2px solid red; */
+    height: 100%;
+}
+
+.moves h3 {
+    font-size: 1.8rem;
+    background: lightblue;
+    border: 3px solid darkcyan;
+}
+
+
+.game-message {
+    margin: 0 auto;
+    height: 220px;
+    width: 360px;
+    /* border: 2px solid purple; */
+    background: rgb(205, 234, 243);
+}
+
+#play-again {
+    display: none;
+    margin: 0 auto;
+    height: 80px;
+}
