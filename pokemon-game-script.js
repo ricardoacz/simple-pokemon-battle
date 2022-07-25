@@ -2,31 +2,16 @@
 let enemyHp = 100
 let userHp = 100
 
-//Squirtle
-let tackle = 40
-let tailWhip = 2
-let squirtleSpeed = 1
-let squirtleDefense = 20
+//Charmander Object Code
+let charmander = {}
+charmander.hp - 100
+charmander.scratch = 40
+charmander.growl = 2
+charmander.speed = 2
+charmander.defense = 20
 
-//Charmander
-let scratch = 40
-let growl = 2
-let speedCharmander = 2
-let charmanderDefense = 20
-
-//Variables for IDs that containt text messages during game
-let messageBattle = document.querySelector('#text-message')
-let messageBattle2 = document.querySelector('#text-message2')
-let messageFinal = document.querySelector('#final-message')
-
-//Click interations, charmander attacks and reset game btn
-document.querySelector('#scratch').addEventListener('click', useScratch)
-document.querySelector('#growl').addEventListener('click', useGrowl)
-document.querySelector('#play-again').addEventListener('click', playAgain)
-
-//Charmander's attack
-function useScratch(){
-    enemyHp = enemyHp + squirtleDefense - scratch
+charmander.useScratch = function(){
+    enemyHp = enemyHp + squirtleDefense - charmander.scratch
     
 
 
@@ -58,6 +43,67 @@ function useScratch(){
         document.querySelector('#user-life').style.display = 'none'
     }
 }
+
+//Squirtle
+let tackle = 40
+let tailWhip = 2
+let squirtleSpeed = 1
+let squirtleDefense = 20
+
+
+
+//Variables for IDs that containt text messages during game
+let messageBattle = document.querySelector('#text-message')
+let messageBattle2 = document.querySelector('#text-message2')
+let messageFinal = document.querySelector('#final-message')
+
+//Click interations, charmander attacks and reset game btn
+document.querySelector('#scratch').addEventListener('click', charmander.useScratch)
+document.querySelector('#growl').addEventListener('click', useGrowl)
+document.querySelector('#play-again').addEventListener('click', playAgain)
+
+//Charmander
+let scratch = 40
+let growl = 2
+let speedCharmander = 2
+let charmanderDefense = 20
+
+
+
+//Charmander's attack
+// function useScratch(){
+//     enemyHp = enemyHp + squirtleDefense - charmander.scratch
+    
+
+
+//     messageBattle.innerText = 'Charmander used scratch!'
+
+//     //converting number to string and adding % sign to affect css life bar
+//     document.querySelector('#enemy-life').style.width = `${String(enemyHp)}%`
+
+//     //Computer's turn
+//     if(enemyHp > 0) {
+//         pcMove()
+//     }
+    
+
+//     if(enemyHp <= 0 && userHp > 0) {
+//         messageFinal.innerText = 'Charmander won!'
+//         document.querySelector('#squirtle').style.display = 'none'
+//         document.querySelector('.moves').style.display = 'none'
+//         document.querySelector('#play-again').style.display = 'block'
+//         document.querySelector('#enemy-life').style.display = 'none'
+//         messageBattle2.style.display = 'none'
+//     } else if (enemyHp <= 0 && userHp <= 0){
+//         messageFinal.innerText = 'Tie!'
+//         document.querySelector('#squirtle').style.display = 'none'
+//         document.querySelector('#charmander').style.display = 'none'
+//         document.querySelector('.moves').style.display = 'none'
+//         document.querySelector('#play-again').style.display = 'block'
+//         document.querySelector('#enemy-life').style.display = 'none'
+//         document.querySelector('#user-life').style.display = 'none'
+//     }
+// }
 
 //Charmander's non attacking move
 function useGrowl(){
